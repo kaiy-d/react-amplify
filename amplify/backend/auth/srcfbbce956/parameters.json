@@ -1,0 +1,72 @@
+{
+    "identityPoolName": "srcfbbce956_identitypool_fbbce956",
+    "allowUnauthenticatedIdentities": false,
+    "openIdLambdaRoleName": "srcfbbfbbce956_openid_lambda_role",
+    "resourceNameTruncated": "srcfbbce956",
+    "userPoolName": "srcfbbce956_userpool_fbbce956",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email",
+        "name",
+        "website"
+    ],
+    "userpoolClientName": "srcfbbfbbce956_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "srcfbbfbbce956_totp_lambda_role",
+    "userpoolClientLambdaRole": "srcfbbfbbce956_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "srcfbbce956",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default",
+    "usernameAttributes": [
+        "email"
+    ],
+    "additionalQuestions": [
+        "requiredAttributes",
+        "triggers"
+    ],
+    "triggers": "{}",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
+    "dependsOn": []
+}

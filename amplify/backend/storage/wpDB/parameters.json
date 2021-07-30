@@ -1,0 +1,7 @@
+{
+    "tableName": "wpDB",
+    "partitionKeyName": "id",
+    "partitionKeyType": "N",
+    "sortKeyName": "file_name",
+    "sortKeyType": "S"
+}

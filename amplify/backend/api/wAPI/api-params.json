@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/w",
+            "lambdaFunction": "wFunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "wAPI",
+    "apiName": "wAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "wFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "src-prod-20190923070030-authRole",
+        "unAuthRoleName": "src-prod-20190923070030-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "wFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

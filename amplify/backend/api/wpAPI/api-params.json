@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/wp",
+            "lambdaFunction": "wpFunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "wpAPI",
+    "apiName": "wpAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "wpFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "src-prod-20190923070030-authRole",
+        "unAuthRoleName": "src-prod-20190923070030-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "wpFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
